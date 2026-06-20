@@ -1,0 +1,28 @@
+{
+    "name": "MK-Bot",
+    "description": "WhatsApp Bot by Malvin King",
+    "logo": "https://files.catbox.moe/641pvo.jpg",
+    "repository": "https://github.com/XdKing2/Mk-bot",
+    "keywords": ["whatsapp-bot", "malvin-king", "mk-bot"],
+    "success_url": "/",
+    "buildpacks": [
+        { 
+            "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" 
+        }
+    ],
+    "env": {
+        "SESSION_ID": {
+            "description": "Your session ID (starcore~)",
+            "required": true
+        },
+        "OWNER_NUMBER": {
+            "description": "Bot owner's phone number",
+            "required": true
+        },
+        "BOT_MODE": {
+            "description": "Bot mode: public or self",
+            "value": "public",
+            "required": true
+        }
+    }
+}
